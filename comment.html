@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+</head>
+<body>
+    <h1>Add comment</h1>
+  <div id="comment-container">
+     
+    <p>hoe are yupp lkjju lkijuh kle j dfjoa nfhj;lju</p>
+    <p>jjljjl;lakj;lal;kjglj;lk</p>
+    <textarea name="" id="new-comment" cols="90" rows="10"></textarea>
+   <br>
+    <button id="submit-comment" type="submit">submit</button>
+ 
+  </div>
+
+   <script>
+       document.getElementById('submit-comment').addEventListener('click', function(){
+           //2 get user comment
+           const commentBox = document.getElementById('new-comment');
+           //const commentBox = commentBox.value;
+
+           //3. creat comment paragraph
+           const newComment =document.createElement('p');
+           newComment.innerText=commentBox.value;
+
+           //4. append the comment:
+           const commentContainer = document.getElementById('comment-container');
+             commentContainer.appendChild(newComment);
+             
+           //5.clean the comment box:
+           commentBox.value='';
+       })
+   </script>
+</body>     
+</html>

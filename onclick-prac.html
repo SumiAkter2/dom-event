@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+<body>
+   <h1>practice onclick button</h1> 
+   <p>some thing happend.</p>
+   <button onclick="document.body.style.color ='red'">click </button>
+<button onclick="document.body.style.backgroundColor='blue'">click now</button>
+<button onclick="greenColor () ">click</button>
+<button onclick="nowRead () ">now read</button>
+<button id="orange">click orange</button>
+
+<ul class="item-container">
+    <li class="item">lorem 1
+    </li>
+    <li class="item">lorem 1
+    </li>
+    <li class="item">lorem 1
+    </li>
+    <li class="item">lorem 1
+    </li>
+    <li class="item">lorem 1
+    </li>
+    <li class="item">lorem 1
+    </li>{lorem3}
+</ul>
+<script>
+
+
+   /////////2////
+    function greenColor ()  {
+        document.body.style.backgroundColor='green';
+    }
+    function nowRead(){
+        document.body.style.backgroundColor='red';
+    }
+//////3///
+
+    // const makeOrange = document.getElementById('orange');
+    // makeOrange.onclick=orangeColor;
+    // function orangeColor () {
+    //     document.body.style.backgroundColor='orange';
+    // }
+    //4/////
+    // const makeOrangeColor=document.getElementById('orange');makeOrangeColor.addEventListener('click', function(){
+    //     document.body.style.backgroundColor='goldenrod';
+    // })
+//////////////5/////////
+document.getElementById('orange').addEventListener('click',function(){
+    document.body.style.backgroundColor='yellow';
+})
+
+
+</script>
+
+</body>
+</html>

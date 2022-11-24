@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+</head>
+<body>
+    <h1>Bubble Vai</h1>
+    <secation id="container">
+        <h2>vai cholen list banai:</h2>
+<ul id="list-container">
+    <li class="item">lorem2</li>
+    <li id="second-item"  class="item">lorem2</li>
+    <li class="item">lorem2</li>
+    <li class="item">lorem2</li>
+    <li class="item">lorem2</li>
+    <li class="item">lorem2</li>
+</ul>
+
+
+    </section>
+
+    <script>
+        document.getElementById('second-item').addEventListener('click',function(event){
+            console.log('hi')
+            event.stopPropagation();
+        })
+        document.getElementById('list-container').addEventListener('click',function(){
+            console.log('hi,ul')
+        })
+        document.getElementById('container').addEventListener('click',function(){
+            console.log('hi,section')
+        })
+    </script>
+</body>
+</html>

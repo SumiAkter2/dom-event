@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete setting</title>
+</head>
+<body>
+    <h1>hi hello welcome</h1>
+    <h1 id="title-del">delete learning</h1>
+    <input id="del-confirm" type="text" placeholder="Please type delete me">
+    <button id="del-button" disabled>Delete</button>
+
+
+
+
+    <script>
+        document.getElementById('del-button').addEventListener('click', function()
+    {
+        document.getElementById('title-del').style.display="none";
+    })
+    //focus:
+    document.getElementById('del-confirm').addEventListener('focus', function()
+    {
+       // console.log('o amr dike takaise')
+        document.body.style.backgroundColor='lightcoral';
+    })
+    //blur:
+    document.getElementById('del-confirm').addEventListener('blur', function()
+    {
+       // console.log('o amr dike takaise')
+        document.body.style.backgroundColor='white';
+    })
+    //keydown:
+    // document.getElementById('del-confirm').addEventListener('keydown', function()
+    // {
+    //    const deleteFleild=document.getElementById('del-confirm');
+    //    console.log(deleteFleild.value)
+    // })
+    document.getElementById('del-confirm').addEventListener('keyup', function(event)
+    {
+       const deletBtn=document.getElementById('del-button');
+      if(event.target.value=='delete'){
+           deletBtn.removeAttribute('disabled');
+      } 
+      else{
+          deletBtn.setAttribute('disabled',true);
+      }
+    })
+    document.getElementById('del-confirm').addEventListener('change', function()
+    {
+       const deleteFleild=document.getElementById('del-confirm');
+       console.log(deleteFleild.value)
+    })
+    </script>
+</body>
+</html>
